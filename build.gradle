@@ -1,0 +1,60 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+
+group = 'ab'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.6.RELEASE'
+	compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.5'
+	
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// spring boot 2 이상 버전에는 HikariCP 포함 되어있지만 최신 버전을 사용하기 위해 명시함
+	implementation 'com.zaxxer:HikariCP:3.4.1'
+	implementation 'com.google.firebase:firebase-admin:6.10.0'
+	implementation 'org.mariadb.jdbc:mariadb-java-client:2.4.4'
+
+	implementation 'com.fasterxml.jackson.core:jackson-core:2.10.0'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.0'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.0'
+
+	implementation 'org.hibernate:hibernate-core:5.4.6.Final'
+	implementation 'org.hibernate:hibernate-entitymanager:5.4.6.Final'
+	
+	compile group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.0.17.Final'
+	// https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.17.Final'
+
+	
+
+	
+	
+}
