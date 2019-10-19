@@ -1,6 +1,6 @@
 # SpringBoot2 Project Setting
-Spring Boot2 프로젝트 셋팅
-
+Spring Boot2 프로젝트를 구성 및 추가하며 마지막 리팩토링 진행 예정 
+ㅅ
 ## Development environment
  - Spring Boot 2
  - Spring Security 
