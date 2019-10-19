@@ -1,6 +1,10 @@
-# SpringBoot2 Project Setting
+# SpringBoot2 RestAPI Project Setting
 Spring Boot2 프로젝트를 구성 및 추가하며 마지막 리팩토링 진행 예정 
-ㅅ
+
+- version 1 : firebase Token 을 받아서 인증 및 권한 부여 하고 인증 처리 하여 서비스 RestAPI 구성 
+              ( Token 은 FrontEnd 에서 발급 받음 ) 
+
+
 ## Development environment
  - Spring Boot 2
  - Spring Security 
